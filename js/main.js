@@ -1,6 +1,6 @@
 console.log(Vue.version);
 
-Vue.createApp({
+let a = Vue.createApp({
     data() {
         return { 
             msg: 'Hello',
@@ -17,3 +17,17 @@ Vue.createApp({
           }
     }
   }).mount('#app');
+
+let b = Vue.createApp({
+    data() {
+      return {
+        str: ''
+     }
+    },
+    methods: {
+      clickHandler() {
+        let input = document.getElementById('inp')
+        this.str = `input=${input.value}`;
+      }
+      }
+    }).mount('#app1');

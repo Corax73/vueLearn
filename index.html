@@ -10,10 +10,17 @@
     <div id="app">
         <h1 v-if="!name">{{ `${msg}, stranger!` }}</h1>
         <h1 v-else-if="name">{{ `${msg}, ${name}!` }}</h1>
-        <p></p><input type="text" v-on:input="setName"></p>
-        <p></p><input type="text" v-on:input="setAge"></p>
+        <p><input type="text" v-on:input="setName"></p>
+        <p><input type="text" v-on:input="setAge"></p>
         <p>Name: {{ name }}</p>
         <p>Age: {{ age }}</p>
+    </div>
+    <div id="app1">
+        <form v-on:click.prevent="clickHandler">
+            <p><input id="inp" type="text"></p>
+            <input type="submit" value="Submit">
+        </form>
+        <p>String: {{ str }}</p>
     </div>
     <script src="https://unpkg.com/vue@next"></script>
     <script src="js/main.js"></script>
